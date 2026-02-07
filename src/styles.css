@@ -168,3 +168,14 @@ body {
     .nav a { margin: 0 10px; }
     .btn-outline { margin-top: 10px; margin-left: 0; }
 }
+
+/* Styling for the Download button when it's on a light background */
+.main-content .btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.main-content .btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
