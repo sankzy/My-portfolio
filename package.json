@@ -1,0 +1,11 @@
+{
+    "name": "sanke-silas-portfolio",
+    "private": true,
+    "scripts": {
+        "format": "prettier --write \"README.md\" \"src/**/*.{html,css,js}\"",
+        "format:check": "prettier --check \"README.md\" \"src/**/*.{html,css,js}\""
+    },
+    "devDependencies": {
+        "prettier": "^3.9.9"
+    }
+}
