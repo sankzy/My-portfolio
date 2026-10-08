@@ -1,0 +1,66 @@
+[
+    {
+        "slug": "local-resource-finder",
+        "title": "Local Resource Finder",
+        "stack": [
+            "React",
+            "TypeScript",
+            "Vite",
+            "Leaflet",
+            "Node.js",
+            "Express",
+            "PostgreSQL + PostGIS",
+            "Supabase",
+            "Vercel",
+            "Render"
+        ],
+        "description": "A full-stack, map-based app for discovering local resources near you. It uses geolocation with a manual search fallback, PostGIS geospatial queries, JWT authentication with role-based access, one-review-per-user ratings, and an admin moderation workflow.",
+        "liveUrl": "https://local-resource-finder.vercel.app",
+        "repoUrl": "https://github.com/sankzy/Local-Resource-Finder"
+    },
+    {
+        "slug": "henrytomz-foodstuff-hub",
+        "title": "HenryTomz Foodstuff Hub",
+        "badge": "Client project",
+        "stack": ["HTML", "CSS", "JavaScript", "Google Sheets (CSV)", "WhatsApp", "Vercel"],
+        "description": "An online storefront for a foodstuff retailer in Kaduna. The owner updates prices from a Google Sheet on a phone, so changes go live without touching code. Customers browse the market board, add quantities to a basket and send the order to the shop on WhatsApp.",
+        "liveUrl": "https://henryfoodstuff.vercel.app/",
+        "repoUrl": "https://github.com/sankzy/HenryTomz-Foodstuff-Hub"
+    },
+    {
+        "slug": "bluestock-fintech-capstone",
+        "title": "Bluestock Fintech Capstone",
+        "badge": "Capstone",
+        "description": "A fintech platform interface for presenting financial data, with analytics views and interactive forms. It includes a B2B registration flow where accounts are approved from an admin dashboard, and a separate demo request form.",
+        "liveUrl": "https://bluestock-fintech-capstone.vercel.app/",
+        "extraLinks": [
+            {
+                "label": "Demo Request Form",
+                "url": "https://bluestock-fintech-capstone-ll4o.vercel.app/"
+            }
+        ],
+        "repoNote": "Source code is private (company policy)."
+    },
+    {
+        "slug": "intern-job-tracker",
+        "title": "Internship Tracker",
+        "stack": ["Next.js", "MongoDB", "Tailwind CSS", "Vercel"],
+        "description": "A dashboard that helps applicants track internship applications, interview stages and status updates. Applications are stored in MongoDB, can be filtered by status, and the layout works on mobile.",
+        "liveUrl": "https://intern-job-tracker.vercel.app/",
+        "repoUrl": "https://github.com/sankzy/intern-job-tracker"
+    },
+    {
+        "slug": "shiptivitas",
+        "title": "Shiptivitas Logistics Kanban",
+        "badge": "YC Job Simulation",
+        "stack": ["React.js", "Node.js", "SQL", "Dragula.js"],
+        "description": "Completed a full-stack engineering simulation for a YC-backed startup. Frontend: drag-and-drop task reordering. Backend: a Node.js persistence layer that syncs board state with a database. Data: used SQL to analyze user activity and proposed feature growth hypotheses.",
+        "repoUrl": "https://github.com/sankzy/shiptivitas-1"
+    },
+    {
+        "slug": "security-light",
+        "title": "Automatic Security Light Control System",
+        "focus": "Hardware logic, automation, circuit design",
+        "description": "An automated hardware solution using LDR sensors and relay logic to reduce energy consumption. Demonstrates foundational algorithmic thinking and system design."
+    }
+]

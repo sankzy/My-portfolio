@@ -222,6 +222,23 @@ body {
     border: 1px solid #e2e8f0;
 }
 
+.project-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+
+.project-note {
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
 .project-heading {
     display: flex;
     justify-content: space-between;

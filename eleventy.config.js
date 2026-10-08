@@ -24,6 +24,18 @@ export default function (eleventyConfig) {
         );
     });
 
+    // {{ project.slug | projectImage }} finds a screenshot in src/images/projects/
+    // named after the project slug (.webp, .png, .jpg or .jpeg). If there is no
+    // file yet, it returns an empty string and the page shows no image.
+    eleventyConfig.addFilter('projectImage', (slug) => {
+        for (const ext of ['webp', 'png', 'jpg', 'jpeg']) {
+            if (fs.existsSync(path.join('src/images/projects', `${slug}.${ext}`))) {
+                return `/images/projects/${slug}.${ext}`;
+            }
+        }
+        return '';
+    });
+
     return {
         dir: {
             input: 'src',
