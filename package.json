@@ -2,10 +2,18 @@
     "name": "sanke-silas-portfolio",
     "private": true,
     "scripts": {
-        "format": "prettier --write \"README.md\" \"src/**/*.{html,css,js}\"",
-        "format:check": "prettier --check \"README.md\" \"src/**/*.{html,css,js}\""
+        "format": "prettier --write \"README.md\" \"eleventy.config.js\" \"src/**/*.{css,js,json}\"",
+        "format:check": "prettier --check \"README.md\" \"eleventy.config.js\" \"src/**/*.{css,js,json}\"",
+        "build": "eleventy",
+        "start": "eleventy --serve"
     },
     "devDependencies": {
+        "@11ty/eleventy": "^3.1.6",
+        "@fortawesome/fontawesome-free": "^7.3.1",
         "prettier": "^3.9.9"
+    },
+    "type": "module",
+    "engines": {
+        "node": ">=18"
     }
 }

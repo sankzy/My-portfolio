@@ -1,0 +1,12 @@
+{
+    "name": "Sanke Silas",
+    "url": "https://sankeportfolio.vercel.app",
+    "ogImage": "/images/eagle-hero.jpg",
+    "ogImageAlt": "An eagle in flight above the clouds",
+    "nav": [
+        { "label": "Home", "url": "/" },
+        { "label": "About", "url": "/about.html" },
+        { "label": "Projects", "url": "/projects.html" },
+        { "label": "Contact", "url": "/contact.html" }
+    ]
+}

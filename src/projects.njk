@@ -1,0 +1,71 @@
+---
+layout: layouts/base.njk
+title: Projects | Sanke Silas
+description: Explore software and engineering projects by Sanke Silas, including a logistics kanban board and internship tracker.
+permalink: projects.html
+mainClass: main-content container
+---
+
+<h1 class="page-title">Featured Proof of Work</h1>
+
+<section class="project-card" aria-labelledby="shiptivitas-title">
+    <div class="project-heading">
+        <h2 id="shiptivitas-title">Shiptivitas Logistics Kanban</h2>
+        <span class="project-badge">YC Job Simulation</span>
+    </div>
+    <p><strong>Stack:</strong> React.js, Node.js, SQL, Dragula.js</p>
+    <p>
+        Completed a full-stack engineering simulation for a YC-backed startup.
+        <strong>Frontend:</strong> Implemented real-time drag-and-drop task reordering.
+        <strong>Backend:</strong> Built a Node.js persistence layer to sync board states with a
+        database. <strong>Data:</strong> Used SQL to analyze user activity and proposed feature growth
+        hypotheses.
+    </p>
+    <div class="project-actions">
+        <a
+            href="https://github.com/sankzy/shiptivitas-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+        >
+            {% icon "brands/github" %} View Repository
+        </a>
+    </div>
+</section>
+
+<section class="project-card" aria-labelledby="tracker-title">
+    <h2 id="tracker-title">Full-Stack Internship Tracker</h2>
+    <p><strong>Stack:</strong> Next.js, MongoDB, Tailwind CSS, Vercel</p>
+    <p>
+        A production-ready dashboard designed to help developers track their internship
+        applications. Features real-time status updates, NoSQL database persistence, and a
+        mobile-responsive UI.
+    </p>
+    <div class="project-actions">
+        <a
+            href="https://intern-job-tracker.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+        >
+            {% icon "solid/up-right-from-square" %} Live Demo
+        </a>
+        <a
+            href="https://github.com/sankzy/intern-job-tracker"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-outline"
+        >
+            {% icon "brands/github" %} Code
+        </a>
+    </div>
+</section>
+
+<section class="project-card" aria-labelledby="security-light-title">
+    <h2 id="security-light-title">Automatic Security Light Control System</h2>
+    <p><strong>Focus:</strong> Hardware Logic, Automation, Circuit Design</p>
+    <p>
+        An automated hardware solution utilizing LDR sensors and relay logic to optimize energy
+        consumption. Demonstrates foundational algorithmic thinking and system design.
+    </p>
+</section>
