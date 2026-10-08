@@ -1,44 +1,72 @@
 # Sanke Silas Portfolio
 
-A personal portfolio for Sanke Silas, featuring an introduction, background, selected software and engineering projects, and contact links.
+Personal portfolio of Sanke Silas, a full-stack developer and electrical engineer. It has a home page, an about page, a projects page with live demos and source links, and contact details.
+
+**Live site:** https://sankeportfolio.vercel.app
+
+![Home page on desktop](docs/screenshot-desktop.png)
+
+<img src="docs/screenshot-mobile.png" alt="Projects page on a phone" width="260" />
 
 ## Built with
 
+- [Eleventy](https://www.11ty.dev/) (Nunjucks templates) for a static build
 - Semantic HTML5
-- CSS3 with custom properties and responsive layouts
-- Font Awesome icons
+- Plain CSS with custom properties, responsive layout and visible focus styles
+- Inline SVG icons from [Font Awesome Free](https://fontawesome.com/) (CC BY 4.0)
+- Prettier for formatting
+- Deployed on Vercel
 
-This is a static site with no build step or runtime package dependencies. The shared header and footer are loaded from `src/partials/` by `src/layout.js`. Prettier is an optional development dependency for formatting.
+## Project structure
+
+```text
+src/
+  _data/site.json        site name, URL, navigation, share image
+  _data/projects.json    every project shown on the Projects page
+  _includes/layouts/     base layout (head, meta tags, skip link)
+  _includes/partials/    header and footer, written once and used on every page
+  images/                hero image, share image, project screenshots
+  *.njk                  the four pages
+eleventy.config.js       build settings and the icon / projectImage helpers
+vercel.json              build command and output folder for Vercel
+```
 
 ## Run locally
 
-Because the shared layout uses `fetch`, serve the site over HTTP instead of opening the HTML files directly. Start a static file server from the `src` directory, then visit the address it prints:
-
 ```sh
-cd src
-python3 -m http.server 8000
+npm install
+npm start
 ```
 
-## Pages
+Open the address Eleventy prints (usually http://localhost:8080). The site rebuilds when you save a file.
 
-- `src/index.html` - introduction and social links
-- `src/about.html` - profile and technical expertise
-- `src/projects.html` - selected projects
-- `src/contact.html` - contact options
+To create the production build in `_site/`:
 
-## Sharing and deployment
+```sh
+npm run build
+```
 
-No live demo URL or screenshot is configured yet. Open Graph previews use the publicly accessible eagle image stored in this repository. Once the portfolio is deployed, update the Open Graph image to a domain you control if preferred.
+## Add or edit a project
 
-The shared navigation marks the current page automatically, while the header and footer markup each live in one partial.
+1. Add an entry to `src/_data/projects.json`. `slug`, `title` and `description` are required. `stack`, `badge`, `liveUrl`, `repoUrl`, `extraLinks`, `repoNote` and `focus` are optional.
+2. Optional: save a screenshot as `src/images/projects/<slug>.png` (or `.webp` / `.jpg`), 1280x800. It appears on the card automatically, with alt text from `imageAlt` or the project title.
 
 ## Formatting
 
-Run Prettier before committing changes:
-
 ```sh
-npm install
-npm run format
+npm run format        # fix formatting
+npm run format:check  # only check
 ```
 
-To check formatting without changing files, run `npm run format:check`.
+Prettier covers CSS, JS, JSON and this README. The `.njk` templates use 4-space indentation by hand.
+
+## Deployment
+
+Vercel reads `vercel.json`: build command `npm run build`, output directory `_site`. Pushing to the production branch deploys the site. The share image and canonical URLs use the domain in `src/_data/site.json`, so update `url` there if the domain changes.
+
+## Accessibility and SEO
+
+- One `h1` per page, skip-to-content link, `aria-current` on the active page
+- External links use `rel="noopener noreferrer"`
+- Description, Open Graph and Twitter card tags and a canonical link on every page
+- Icons are decorative and hidden from screen readers
