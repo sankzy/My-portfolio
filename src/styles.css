@@ -4,6 +4,8 @@
     --bg: #f8fafc;
     --text: #2d3748;
     --light: #ffffff;
+    --focus: #1a365d;
+    --focus-on-dark: #f6c453;
 }
 
 * {
@@ -11,7 +13,14 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family:
+        system-ui,
+        -apple-system,
+        'Segoe UI',
+        Roboto,
+        'Helvetica Neue',
+        Arial,
+        sans-serif;
     background-color: var(--bg);
     color: var(--text);
     margin: 0;
@@ -44,9 +53,15 @@ body {
     transform: translateY(0);
 }
 
-a:focus-visible {
-    outline: 3px solid #f6c453;
+/* Dark focus ring on light backgrounds, yellow ring on the dark header and hero. */
+:focus-visible {
+    outline: 3px solid var(--focus);
     outline-offset: 3px;
+}
+
+.main-header :focus-visible,
+.hero :focus-visible {
+    outline-color: var(--focus-on-dark);
 }
 
 /* Inline SVG icons (see the icon shortcode in eleventy.config.js) */
@@ -147,6 +162,11 @@ a:focus-visible {
     transform: translateY(-2px);
 }
 
+.btn-outline:hover {
+    background: white;
+    color: var(--primary);
+}
+
 /* Social Bar (Home Page) */
 .social-bar {
     background: white;
@@ -236,6 +256,7 @@ a:focus-visible {
 }
 
 .contact-card {
+    border: 1px solid transparent;
     background: white;
     padding: 40px;
     border-radius: 15px;
@@ -297,4 +318,15 @@ a:focus-visible {
 .main-content .btn-outline:hover {
     background: var(--primary);
     color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+
+    .btn:hover,
+    .contact-card:hover {
+        transform: none;
+    }
 }
