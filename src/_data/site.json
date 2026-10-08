@@ -1,8 +1,8 @@
 {
     "name": "Sanke Silas",
     "url": "https://sankeportfolio.vercel.app",
-    "ogImage": "/images/eagle-hero.jpg",
-    "ogImageAlt": "An eagle in flight above the clouds",
+    "ogImage": "/images/og-image.jpg",
+    "ogImageAlt": "Sanke Silas portfolio home page: Precision Engineering Meets Modern Web Development",
     "nav": [
         { "label": "Home", "url": "/" },
         { "label": "About", "url": "/about.html" },
