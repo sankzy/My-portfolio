@@ -42,6 +42,15 @@
         "repoNote": "Source code is private (company policy)."
     },
     {
+        "slug": "voltix-internship-2026",
+        "title": "VOLTIX Internship: SankzyTech Studio",
+        "badge": "Internship",
+        "stack": ["HTML", "CSS", "JavaScript", "Node.js", "Express", "MongoDB", "JWT", "Vercel", "Render"],
+        "description": "A landing page for a technology studio, built during the VOLTIX Full Stack Development Internship. The contact form validates input in the browser and on the server, then saves inquiries to MongoDB. A password-protected content manager lets an admin add, edit and delete content through a JWT-secured API.",
+        "liveUrl": "https://sankzytech.vercel.app",
+        "repoUrl": "https://github.com/sankzy/VOLTIX-Internships-Program-2026"
+    },
+    {
         "slug": "intern-job-tracker",
         "title": "Internship Tracker",
         "stack": ["Next.js", "MongoDB", "Tailwind CSS", "Vercel"],
